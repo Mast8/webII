@@ -73,28 +73,31 @@
     
     <section>
          <h3>Revise</h3>
-         <form action="">
+         <!-- <form method="post" action="https://www.randyconnolly.com/tests/process.php"> -->
+          <form method="get" action="https://www.randyconnolly.com/tests/process.php"></form>
           <fieldset>
                <legend>Filter Orders</legend>
-               <label for="customer">Customer</label> <br>
-               <input type="text" name="customer" placeholder="Enter name"> <br>
+               <label for="customer">Customer</label> 
+               <input type="text" name="client" placeholder="Enter name">
 
-               <label for="country">Country</label><br>
+               <label for="country">Country</label>
                <select name="country" id="country">
                     <option value="">Choose a country</option>
-                    <option value="">France</option>
-                    <option value="">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="England">England</option>
+
                </select> <br>
 
-               <label for="status">Status</label><br>
-               <input type="radio" name="status" value="1">Pending
-               <input type="radio" name="status" value="2">Processing
-               <input type="radio" name="status" value="3">Shipped <br>
+               <label for="status">Status</label>
+               <input type="radio" name="type" value="pending">Pending
+               <input type="radio" name="type" value="processing">Processing
+               <input type="radio" name="type" value="shipped">Shipped 
 
                <label for="date">Order date</label> 
-               <input type="date" name="order-date" id="order-d"><br>
-
-               <input type="submit">
+               <input type="date" name="date" id="order-d">
+               <br>
+               <input class="button" type="submit">
           </fieldset>
 
          </form>
