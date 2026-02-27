@@ -36,15 +36,48 @@ section h3 {
     background-color:    #03A9F4;    
 }
 
-
-
-table {
-    margin-left: auto;
-    margin-right: auto;
+legend {
+    text-align: center;
+    width: stretch;
+    padding: 0.5em;
+    color: white;
+    background-color: #607d8b;
 }
+
+label {
+    margin-top: 0.8em;
+    display: block; 
+    font-weight: bold;
+}
+
+.radio-lab {
+    display:inline; 
+    font-weight: 400;
+}
+
+input {
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+form {
+    padding: 0.4em 2em;
+}
+
+.button {
+    margin: 1em 0 0.3em 0;
+    padding: 0.7em 1.5em;
+    background-color: rgb(72, 14, 105);
+    color: white;
+}
+
+
+
+/* table formatting -- you will add these */
 
 table{
     padding: 0.5em;
+    width: stretch;
+    margin: 0 2em;
 }
 td {
     padding: 0.8em;
@@ -64,45 +97,4 @@ caption {
     background-color: #607d8b;
     padding: 0.5em;
 }
-legend {
-    text-align: center;
-    width: stretch;
-    padding: 0.5em;
-    color: white;
-    background-color: #607d8b;
-}
-label {
-    margin-top: 0.6em;
-    display: block; 
-    font-weight: bold;
-}
-
-input {
-    padding: 0.5em 0.5em 0.5em 0;
-}
-
-form {
-    padding: 0.5em 2em;
-}
-
-fieldset {
-    margin: 0 1em 0.5em 1em;
-}
-
-.button {
-    margin: 1em 0 0.3em 0;
-    padding: 0.7em 1.5em;
-    background-color: rgb(72, 14, 105);
-    color: white;
-}
-
-progress {
-    
-    /* border-radius: 0;
-    accent-color: #03A9F4; */
-}
-
-/* table formatting -- you will add these */
-
-
 

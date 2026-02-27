@@ -3,23 +3,25 @@
 <head>
    <meta charset="utf-8">
    <title>Chapter 5</title>
-   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="reset.css" >
    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">       
-   <link rel="stylesheet" href="ch05-proj1.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">       
+   <link rel="stylesheet" href="ch05-proj1.css" >
 </head>
 <body>
 
     <section>
          <h3>Data</h3>
          <table>
+          <caption>Orders</caption>
+
           <tr>
-               <th>Id</th>
-               <th>Date</th>
-               <th>Customer</th>
-               <th>Country</th>
-               <th>Progress</th>
-               <th>Status</th>
+               <th scope="col">Id</th>
+               <th scope="col">Date</th>
+               <th scope="col">Customer</th>
+               <th scope="col">Country</th>
+               <th scope="col">Progress</th>
+               <th scope="col">Status</th>
           </tr>
                
           <tbody>
@@ -28,7 +30,7 @@
                     <td>Sep 12, 2017</td>
                     <td>Jean Rousseau</td>
                     <td>France</td>
-                    <td><progress value="100"></progress></td>
+                    <td><progress value="100" max="100">100%</progress></td>
                     <td><span class="status status-shipped">Shipped</span></td>
                </tr>
                <tr>
@@ -36,7 +38,7 @@
                     <td>Sep 20, 2017</td>
                     <td>Georg Hegel</td>
                     <td>Germany</td>
-                    <td><progress value="100"></progress></td>
+                    <td><progress value="100" max="100">100%</progress></td>
                     <td><span class="status status-shipped">Shipped</span></td>
                </tr>
                <tr>
@@ -44,7 +46,7 @@
                     <td>Oct 3, 2017</td>
                     <td>John Locke</td>
                     <td>England</td>
-                    <td><progress value="60" max="100"></progress></td>
+                    <td><progress value="60" max="100">60%</progress></td>
                     <td><span class="status status-processing">Processing</span></td>
                </tr>
                <tr>
@@ -52,7 +54,7 @@
                     <td>Oct 8, 2017</td>
                     <td>Thomas Hobbes</td>
                     <td>England</td>
-                    <td><progress value="30" max="100"></progress></td>
+                    <td><progress value="30" max="100">30%</progress></td>
                     <td><span class="status status-pending">Pending </span></td>
                  
                </tr>
@@ -61,11 +63,10 @@
                     <td>Oct 10, 2017</td>
                     <td>Johann Fichte</td>
                     <td>Germany</td>
-                    <td> <progress value="30" max="100"></progress></td>
+                    <td> <progress value="30" max="100">30%</progress></td>
                     <td> <span class="status status-pending">Pending</span></td>
                </tr>
           </tbody>
-          <caption>Orders</caption>
          </table>
       
          
@@ -74,11 +75,11 @@
     <section>
          <h3>Revise</h3>
          <!-- <form method="post" action="https://www.randyconnolly.com/tests/process.php"> -->
-          <form method="get" action="https://www.randyconnolly.com/tests/process.php"></form>
+          <form method="get" action="https://www.randyconnolly.com/tests/process.php">
           <fieldset>
                <legend>Filter Orders</legend>
                <label for="customer">Customer</label> 
-               <input type="text" name="client" placeholder="Enter name">
+               <input type="text" name="client" id="customer" placeholder="Enter name">
 
                <label for="country">Country</label>
                <select name="country" id="country">
@@ -88,16 +89,20 @@
                     <option value="England">England</option>
 
                </select> <br>
+               <label >Status</label>
+               <input type="radio" id="pending" name="type" value="pending">
+               <label class="radio-lab" for="pending">Pending</label>
+               
+               <input type="radio" id="processing" name="type" value="processing">
+               <label class="radio-lab"  for="processing">Processing</label>
 
-               <label for="status">Status</label>
-               <input type="radio" name="type" value="pending">Pending
-               <input type="radio" name="type" value="processing">Processing
-               <input type="radio" name="type" value="shipped">Shipped 
+               <input type="radio" id="shipped" name="type" value="shipped">
+               <label class="radio-lab"  for="shipped">Shipeed</label>
 
                <label for="date">Order date</label> 
-               <input type="date" name="date" id="order-d">
+               <input type="date" name="date" id="date">
                <br>
-               <input class="button" type="submit">
+               <input class="button" type="submit" >
           </fieldset>
 
          </form>
